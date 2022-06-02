@@ -4,13 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.razvoj_android_aplikacija_projekt_treci_razred.roomdatabase.User;
 import com.example.razvoj_android_aplikacija_projekt_treci_razred.roomdatabase.UserDataBase;
@@ -40,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        
+                        Intent registrationIntent = new Intent(MainActivity.this, RegistrationActivity.class);
+                        startActivity(registrationIntent);
 
                     }
                 }
