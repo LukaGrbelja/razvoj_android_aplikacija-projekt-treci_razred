@@ -46,12 +46,12 @@ public class RegistrationActivity extends AppCompatActivity {
                         if (usernames.indexOf(firstInput.getText().toString()) != -1) {
 
                             Toast.makeText(RegistrationActivity.this, "Korisnicko ime zauzeto!", Toast.LENGTH_SHORT).show();
+                            firstInput.requestFocus();
 
                         }
                         else {
 
                             userDataBase.userDao().insertNewUser(new User(firstInput.getText().toString(), secondInput.getText().toString()));
-                            firstInput.getText().clear();
                             Intent registrationIntent = new Intent(RegistrationActivity.this, MainActivity.class);
                             startActivity(registrationIntent);
 

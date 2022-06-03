@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">razvoj_android_aplikacija-projekt-treci_razred</string>
+
+    <string-array name="diff">
+        <item>Lagano</item>
+        <item>Srednje</item>
+        <item>Tesko</item>
+    </string-array>
 </resources>
