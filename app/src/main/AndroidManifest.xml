@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Razvoj_android_aplikacijaprojekttreci_razred">
         <activity
+            android:name=".GameActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".MainGameActivity"
             android:exported="false"
             android:screenOrientation="landscape" />

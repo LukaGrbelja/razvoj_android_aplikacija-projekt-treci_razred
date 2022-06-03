@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainGameActivity extends AppCompatActivity {
 
@@ -45,7 +46,7 @@ public class MainGameActivity extends AppCompatActivity {
 
         start.setOnClickListener(view -> {
 
-
+            Toast.makeText(MainGameActivity.this, drop.getText().toString(), Toast.LENGTH_SHORT).show();
 
         });
 
