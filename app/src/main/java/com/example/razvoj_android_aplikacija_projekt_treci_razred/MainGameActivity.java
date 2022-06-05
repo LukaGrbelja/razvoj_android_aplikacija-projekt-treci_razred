@@ -33,7 +33,7 @@ public class MainGameActivity extends AppCompatActivity {
         Intent intent = getIntent();
         userName = intent.getStringExtra("username");
 
-        welcomeText.setText(String.format("Dobrodosao %s",userName));
+        welcomeText.setText(String.format("Dobrodošao %s",userName));
 
         drop = findViewById(R.id.autoCompleteTextView);
         diffs = getResources();
@@ -46,7 +46,8 @@ public class MainGameActivity extends AppCompatActivity {
 
         start.setOnClickListener(view -> {
 
-            Toast.makeText(MainGameActivity.this, drop.getText().toString(), Toast.LENGTH_SHORT).show();
+            Intent startGame = new Intent(MainGameActivity.this, GameActivity.class);
+            startActivity(startGame);
 
         });
 

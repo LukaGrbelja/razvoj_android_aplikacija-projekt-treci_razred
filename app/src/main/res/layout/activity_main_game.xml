@@ -24,8 +24,7 @@
         android:layout_width="250dp"
         android:layout_height="100dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="50dp"
         android:text="Dobrodosli User"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/inputLayout"
@@ -33,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toEndOf="@+id/navbar"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputLayout"
@@ -55,7 +54,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:inputType="none"
-            android:text="AutoCompleteTextView"
+            android:text="Odaberite težinu"
             android:textColor="#757575"
             tools:ignore="LabelFor" />
 

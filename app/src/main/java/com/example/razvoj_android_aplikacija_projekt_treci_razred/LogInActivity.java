@@ -52,15 +52,43 @@ public class LogInActivity extends AppCompatActivity {
             String firstInputValue = firstInput.getText().toString();
             String secondInputValue = secondInput.getText().toString();
 
+            Boolean pass = false;
+
             for (User user : userArrayList) {
 
-                if (user.getUserName().equals(firstInputValue) && user.getPassWord().equals(secondInputValue)) {
+                if (user.getUserName().equals(firstInputValue)) {
+
+                    pass = true;
+                    if (user.getPassWord().equals(secondInputValue)) {
+
+                        Intent login = new Intent(LogInActivity.this, MainGameActivity.class);
+                        login.putExtra("username", user.getUserName());
+                        startActivity(login);
+
+                    }
+                    else {
+
+                        Toast.makeText(LogInActivity.this, "Netočna lozinka", Toast.LENGTH_SHORT).show();
+                        secondInput.requestFocus();
+
+                    }
+
+                }
+
+                /*if (user.getUserName().equals(firstInputValue) && user.getPassWord().equals(secondInputValue)) {
 
                     Intent login = new Intent(LogInActivity.this, MainGameActivity.class);
                     login.putExtra("username", user.getUserName());
                     startActivity(login);
 
-                }
+                }*/
+
+            }
+
+            if (pass == false) {
+
+                Toast.makeText(LogInActivity.this, "Nema korisnika pod tim imenom", Toast.LENGTH_SHORT).show();
+                firstInput.requestFocus();
 
             }
 
